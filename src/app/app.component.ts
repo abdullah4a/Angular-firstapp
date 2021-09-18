@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 class appClass {
   constructor(
     public userId: number,
@@ -17,7 +18,7 @@ class appClass {
 export class AppComponent implements OnInit {
   title = 'firstapp';
   app: appClass[] = [];
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient, private modalService: NgbModal) {}
   ngOnInit(): void {
     this.getTodos();
   }
@@ -27,7 +28,6 @@ export class AppComponent implements OnInit {
       .subscribe((responce) => {
         console.log('Responce ' + responce);
         this.app = responce;
-        // console.log(this.app);
       });
   }
 }
