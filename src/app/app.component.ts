@@ -30,4 +30,13 @@ export class AppComponent implements OnInit {
         this.app = responce;
       });
   }
+  Open() {
+    alert('You can Enter Details');
+  }
+  Edit() {
+    alert('Edited');
+  }
+  del(id) {
+    // this.app.indexOf()eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+  }
 }

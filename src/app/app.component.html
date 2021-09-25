@@ -1,6 +1,11 @@
-<div>
+<div class="container">
     <h1>Http Client Module in Working</h1>
-    <div class="container">
+    <div (click)="(Open)" class="border">
+        <button class="btn btn-md btn-outline-primary">
+      <i class="fa fa-user"> </i>New Todo
+    </button>
+    </div>
+    <div>
         <table class="table table-bordered table-striped">
             <thead>
                 <tr>
@@ -20,17 +25,17 @@
                         <span>{{ todo.id }}</span>
                     </td>
                     <td>
-                        <span>{{ todo.title }}</span>
+                        <span>Title {{ todo.title }}</span>
                     </td>
                     <td>
                         <span>{{ todo.completed }}</span>
                     </td>
                     <td>
-                        <button class="btn btn-sm btn-warning">
+                        <button (click)="(Edit)" class="btn btn-sm btn-warning">
               <i class="fa fa-edit"></i>
               Edit
             </button>
-                        <button class="btn btn-sm btn-danger">
+                        <button (click)="(del)" class="btn btn-sm btn-danger">
               <i class="fa fa-remove"> </i>
               Delete
             </button>
@@ -38,10 +43,5 @@
                 </tr>
             </tbody>
         </table>
-    </div>
-    <div class="border">
-        <button (click)="open(content)" class="btn btn-md btn-outline-primary">
-      <i class="fa fa-user"> </i>New Todo
-    </button>
     </div>
 </div>
